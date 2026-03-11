@@ -4780,9 +4780,9 @@
 function parseNorwegianNumber(s) {
   if (!s || s === '—') return -Infinity;
   var cleaned = s.replace(/\s*kr$/,'').replace(/\s*m²$/,'').replace(/%$/,'')
-                  .replace(/[\s\u00a0]/g,'').replace(',','.');
-  var val = parseFloat(cleaned);
-  return isNaN(val) ? -Infinity : val;
+                  .replace(/[\s\u00a0]/g,'').replaceAll(',','.');
+  var val = Number.parseFloat(cleaned);
+  return Number.isNaN(val) ? -Infinity : val;
 }
 
 $.fn.dataTable.ext.type.order['norwegian-num-pre'] = function(d) {
@@ -4792,8 +4792,8 @@ $.fn.dataTable.ext.type.order['norwegian-num-pre'] = function(d) {
 
 function initTable(tableId, numericCols) {
   var colDefs = [];
-  for (var i = 0; i < numericCols.length; i++) {
-    colDefs.push({ type: 'norwegian-num', targets: numericCols[i] });
+  for (var col of numericCols) {
+    colDefs.push({ type: 'norwegian-num', targets: col });
   }
   $('#' + tableId).DataTable({
     scrollX: true,
@@ -4812,20 +4812,20 @@ function initTable(tableId, numericCols) {
 
 function escHtml(s) {
   return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
 }
 
 function renderTilstand(raw) {
   if (!raw || raw === 'no_data|0|0|0|0') return '<span style="color:#888">Ingen tilstandsdata</span>';
   var parts = raw.split('|');
   var status = parts[0];
-  var tg1 = parseInt(parts[1]) || 0;
-  var tg2 = parseInt(parts[2]) || 0;
-  var tg3 = parseInt(parts[3]) || 0;
-  var tgiu = parseInt(parts[4]) || 0;
+  var tg1 = Number.parseInt(parts[1]) || 0;
+  var tg2 = Number.parseInt(parts[2]) || 0;
+  var tg3 = Number.parseInt(parts[3]) || 0;
+  var tgiu = Number.parseInt(parts[4]) || 0;
   // Terminal non-fetch states
   if (status === 'no_report') return '<span style="color:#888">Ingen rapport</span>';
   if (status === 'broker_not_supported') return '<span style="color:#888">Megler ikke støttet</span>';
@@ -4858,8 +4858,8 @@ function initFavoritterTable(tableId, numericCols, statusColIdx, noteColIdx, til
     { visible: false, targets: noteColIdx },
     { visible: false, targets: tilstandColIdx },
   ];
-  for (var i = 0; i < numericCols.length; i++) {
-    colDefs.push({ type: 'norwegian-num', targets: numericCols[i] });
+  for (var col of numericCols) {
+    colDefs.push({ type: 'norwegian-num', targets: col });
   }
   var table = $('#' + tableId).DataTable({
     scrollX: true,
@@ -4900,7 +4900,7 @@ function initFavoritterTable(tableId, numericCols, statusColIdx, noteColIdx, til
 
 // Normalize ü→u for search (so "Grunerløkka" matches "Grünerløkka")
 function removeAccents(s) {
-  return s.replace(/ü/g, 'u').replace(/Ü/g, 'U');
+  return s.replaceAll('ü', 'u').replaceAll('Ü', 'U');
 }
 // Override DataTables search to be accent-insensitive
 $.fn.dataTable.ext.type.search['string'] = function(d) {
@@ -4938,7 +4938,7 @@ initTable("fasiliteter", [2, 3, 4, 5, 6, 7, 8]);
       document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
       document.querySelectorAll('.tab-content').forEach(function(c) { c.style.display = 'none'; });
       btn.classList.add('active');
-      var tabId = btn.getAttribute('data-tab');
+      var tabId = btn.dataset.tab;
       document.getElementById('tab-' + tabId).style.display = 'block';
       // Recalc column widths on tab switch (scrollX needs this)
       $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
