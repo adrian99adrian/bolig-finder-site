@@ -248,6 +248,11 @@
     margin-bottom: 0.8rem;
     font-style: italic;
   }
+  .tab-note {
+    font-size: 0.80rem;
+    color: var(--text-muted);
+    margin: 0.3rem 0 0.5rem 0;
+  }
   /* Favoritter expand button + child row */
   .expand-btn {
     background: none;
@@ -304,13 +309,13 @@
 
 <div class="header">
   <h1>Bolig Finder</h1>
-  <div class="timestamp">Sist oppdatert: 2026-03-14 06:12 CET</div>
+  <div class="timestamp">Sist oppdatert: 2026-03-14 16:33 CET</div>
   <div class="header-note">Dette er et personlig prosjekt slik at jeg kan gjøre et godt boligkjøp &mdash; Nettsiden fungerer, men mangler noen funksjonaliteter</div>
   <div class="header-note">Postnummer til bydel kartleggingsdata fra: <a href="https://www.erikbolstad.no/postnummer" target="_blank" rel="noopener">erikbolstad.no/postnummer</a></div>
 </div>
 
 <div class="tab-bar">
-  <button class="tab-btn active" data-tab="boliger_for_sale">Til salgs (69)</button><button class="tab-btn" data-tab="boliger_sold_with_price">Solgt (kjent pris) (67)</button><button class="tab-btn" data-tab="boliger_sold_unknown_price">Solgt (ukjent pris) (107)</button><button class="tab-btn" data-tab="fasiliteter">Fasiliteter (54)</button><button class="tab-btn" data-tab="favoritter">Favoritter (5)</button><button class="tab-btn" data-tab="analysis">Analyse (10)</button>
+  <button class="tab-btn active" data-tab="boliger_for_sale">Til salgs (69)</button><button class="tab-btn" data-tab="boliger_sold_with_price">Solgt (kjent pris) (67)</button><button class="tab-btn" data-tab="boliger_sold_unknown_price">Solgt (ukjent pris) (107)</button><button class="tab-btn" data-tab="fasiliteter">Fasiliteter (73)</button><button class="tab-btn" data-tab="favoritter">Favoritter (5)</button><button class="tab-btn" data-tab="analysis">Analyse (10)</button>
 </div>
 <div class="sort-hint">Tips: Hold Shift + klikk kolonneoverskrifter for å sortere på flere kolonner</div>
 
@@ -3980,6 +3985,7 @@
 </tbody>
 </table>
 </div><div class="tab-content" id="tab-fasiliteter" style="display:none">
+<p class="tab-note">Gangtid er estimert med ~4,8 km/t ganghastighet.</p>
 <table id="fasiliteter" class="display responsive nowrap" style="width:100%">
 <thead><tr>
 <th>Finnkode</th>
@@ -4027,8 +4033,8 @@
 <td>7</td>
 </tr>
 <tr>
-<td>416515593</td>
-<td>416515593</td>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=416515593" target="_blank" rel="noopener">416515593</a></td>
+<td>Sagene - Hesselbergs gate 8A</td>
 <td>30</td>
 <td>2</td>
 <td>1</td>
@@ -4054,7 +4060,7 @@
 <td>29</td>
 <td>20</td>
 <td>7</td>
-<td data-order="9999">-</td>
+<td>25</td>
 <td>11</td>
 <td>1</td>
 <td>26</td>
@@ -4076,7 +4082,7 @@
 <td>29</td>
 <td>20</td>
 <td>7</td>
-<td data-order="9999">-</td>
+<td>25</td>
 <td>11</td>
 <td>1</td>
 <td>26</td>
@@ -4087,7 +4093,7 @@
 <td>92</td>
 <td>7</td>
 <td>3</td>
-<td data-order="9999">-</td>
+<td>19</td>
 <td>14</td>
 <td>2</td>
 <td>23</td>
@@ -4098,7 +4104,7 @@
 <td>29</td>
 <td>20</td>
 <td>7</td>
-<td data-order="9999">-</td>
+<td>25</td>
 <td>11</td>
 <td>1</td>
 <td>26</td>
@@ -4124,6 +4130,17 @@
 <td>2</td>
 <td>2</td>
 <td>11</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=440492724" target="_blank" rel="noopener">440492724</a></td>
+<td>St.Hanshaugen - Fredensborgveien 22A - 605 Anr. 29</td>
+<td>14</td>
+<td>8</td>
+<td>1</td>
+<td>10</td>
+<td>8</td>
+<td>4</td>
+<td>10</td>
 </tr>
 <tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=442984487" target="_blank" rel="noopener">442984487</a></td>
@@ -4153,7 +4170,7 @@
 <td>59</td>
 <td>7</td>
 <td>6</td>
-<td data-order="9999">-</td>
+<td>24</td>
 <td>5</td>
 <td>5</td>
 <td>17</td>
@@ -4197,7 +4214,7 @@
 <td>85</td>
 <td>12</td>
 <td>7</td>
-<td data-order="9999">-</td>
+<td>22</td>
 <td>9</td>
 <td>3</td>
 <td>20</td>
@@ -4219,10 +4236,21 @@
 <td>38</td>
 <td>16</td>
 <td>1</td>
-<td data-order="9999">-</td>
-<td data-order="9999">-</td>
+<td>17</td>
+<td>22</td>
 <td>4</td>
 <td>22</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=447052289" target="_blank" rel="noopener">447052289</a></td>
+<td>Frogner - Oscars gate 37C (H0102</td>
+<td>33</td>
+<td>3</td>
+<td>4</td>
+<td>13</td>
+<td>5</td>
+<td>1</td>
+<td>16</td>
 </tr>
 <tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=447366484" target="_blank" rel="noopener">447366484</a></td>
@@ -4258,8 +4286,8 @@
 <td>13</td>
 </tr>
 <tr>
-<td>448136255</td>
-<td>448136255</td>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=448136255" target="_blank" rel="noopener">448136255</a></td>
+<td>Sentrum - Linstows gate 6</td>
 <td>25</td>
 <td>2</td>
 <td>2</td>
@@ -4274,7 +4302,7 @@
 <td>38</td>
 <td>6</td>
 <td>3</td>
-<td data-order="9999">-</td>
+<td>18</td>
 <td>2</td>
 <td>2</td>
 <td>12</td>
@@ -4300,6 +4328,17 @@
 <td>2</td>
 <td>2</td>
 <td>11</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=449789432" target="_blank" rel="noopener">449789432</a></td>
+<td>St.Hanshaugen - Thereses gate 32D - vender mot indre gård</td>
+<td>36</td>
+<td>4</td>
+<td>0</td>
+<td>15</td>
+<td>3</td>
+<td>3</td>
+<td>21</td>
 </tr>
 <tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=450426211" target="_blank" rel="noopener">450426211</a></td>
@@ -4329,10 +4368,21 @@
 <td>29</td>
 <td>20</td>
 <td>7</td>
-<td data-order="9999">-</td>
+<td>25</td>
 <td>11</td>
 <td>1</td>
 <td>26</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=450764220" target="_blank" rel="noopener">450764220</a></td>
+<td>St.Hanshaugen - Eugenies gate 23H</td>
+<td>33</td>
+<td>7</td>
+<td>5</td>
+<td>20</td>
+<td>6</td>
+<td>2</td>
+<td>24</td>
 </tr>
 <tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=450857447" target="_blank" rel="noopener">450857447</a></td>
@@ -4340,7 +4390,7 @@
 <td>52</td>
 <td>9</td>
 <td>3</td>
-<td data-order="9999">-</td>
+<td>16</td>
 <td>4</td>
 <td>4</td>
 <td>16</td>
@@ -4351,8 +4401,8 @@
 <td>142</td>
 <td>25</td>
 <td>5</td>
-<td data-order="9999">-</td>
-<td data-order="9999">-</td>
+<td>19</td>
+<td>9999</td>
 <td>8</td>
 <td>25</td>
 </tr>
@@ -4363,7 +4413,7 @@
 <td>25</td>
 <td>7</td>
 <td>6</td>
-<td data-order="9999">-</td>
+<td>32</td>
 <td>3</td>
 <td>27</td>
 </tr>
@@ -4374,7 +4424,7 @@
 <td>3</td>
 <td>3</td>
 <td>4</td>
-<td data-order="9999">-</td>
+<td>9999</td>
 <td>4</td>
 <td>21</td>
 </tr>
@@ -4396,9 +4446,20 @@
 <td>14</td>
 <td>7</td>
 <td>14</td>
-<td data-order="9999">-</td>
+<td>18</td>
 <td>0</td>
 <td>17</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=452745726" target="_blank" rel="noopener">452745726</a></td>
+<td>Grünerløkka - Møllerveien 4 - 202 Anr. 6</td>
+<td>18</td>
+<td>8</td>
+<td>2</td>
+<td>16</td>
+<td>7</td>
+<td>1</td>
+<td>13</td>
 </tr>
 <tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=452815498" target="_blank" rel="noopener">452815498</a></td>
@@ -4423,8 +4484,8 @@
 <td>23</td>
 </tr>
 <tr>
-<td>452963989</td>
-<td>452963989</td>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=452963989" target="_blank" rel="noopener">452963989</a></td>
+<td>Grünerløkka - Dynekilgata 7A</td>
 <td>38</td>
 <td>3</td>
 <td>2</td>
@@ -4439,7 +4500,7 @@
 <td>100</td>
 <td>1</td>
 <td>2</td>
-<td data-order="9999">-</td>
+<td>17</td>
 <td>1</td>
 <td>1</td>
 <td>26</td>
@@ -4456,6 +4517,17 @@
 <td>14</td>
 </tr>
 <tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=453885690" target="_blank" rel="noopener">453885690</a></td>
+<td>Vestre Aker - Golfstubben 12</td>
+<td>141</td>
+<td>24</td>
+<td>4</td>
+<td>18</td>
+<td>9999</td>
+<td>7</td>
+<td>24</td>
+</tr>
+<tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=453893455" target="_blank" rel="noopener">453893455</a></td>
 <td>Grünerløkka - Trondheimsveien 197A</td>
 <td>49</td>
@@ -4467,19 +4539,30 @@
 <td>23</td>
 </tr>
 <tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=453978100" target="_blank" rel="noopener">453978100</a></td>
+<td>Grünerløkka - Bjørn Stallares vei 13</td>
+<td>44</td>
+<td>6</td>
+<td>2</td>
+<td>8</td>
+<td>3</td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=454057785" target="_blank" rel="noopener">454057785</a></td>
 <td>Sagene - Griffenfeldts gate 12B</td>
 <td>40</td>
 <td>5</td>
 <td>4</td>
-<td data-order="9999">-</td>
+<td>23</td>
 <td>8</td>
 <td>3</td>
 <td>30</td>
 </tr>
 <tr>
-<td>454068754</td>
-<td>454068754</td>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=454068754" target="_blank" rel="noopener">454068754</a></td>
+<td>Grünerløkka - Lakkegata 64 A</td>
 <td>15</td>
 <td>3</td>
 <td>1</td>
@@ -4494,8 +4577,8 @@
 <td>118</td>
 <td>15</td>
 <td>7</td>
-<td data-order="9999">-</td>
-<td data-order="9999">-</td>
+<td>18</td>
+<td>9999</td>
 <td>4</td>
 <td>20</td>
 </tr>
@@ -4516,7 +4599,7 @@
 <td>25</td>
 <td>2</td>
 <td>1</td>
-<td data-order="9999">-</td>
+<td>20</td>
 <td>12</td>
 <td>2</td>
 <td>19</td>
@@ -4527,7 +4610,7 @@
 <td>31</td>
 <td>19</td>
 <td>9</td>
-<td data-order="9999">-</td>
+<td>24</td>
 <td>13</td>
 <td>1</td>
 <td>27</td>
@@ -4561,7 +4644,7 @@
 <td>12</td>
 <td>5</td>
 <td>16</td>
-<td data-order="9999">-</td>
+<td>9999</td>
 <td>3</td>
 <td>17</td>
 </tr>
@@ -4571,10 +4654,32 @@
 <td>90</td>
 <td>10</td>
 <td>4</td>
-<td data-order="9999">-</td>
+<td>17</td>
 <td>16</td>
 <td>3</td>
 <td>21</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=454798789" target="_blank" rel="noopener">454798789</a></td>
+<td>Grünerløkka - Trondheimsveien 65</td>
+<td>25</td>
+<td>2</td>
+<td>1</td>
+<td>8</td>
+<td>1</td>
+<td>1</td>
+<td>19</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=454922474" target="_blank" rel="noopener">454922474</a></td>
+<td>Ullern - Sollerudveien 41J</td>
+<td>102</td>
+<td>11</td>
+<td>7</td>
+<td>12</td>
+<td>2</td>
+<td>3</td>
+<td>11</td>
 </tr>
 <tr>
 <td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=454934632" target="_blank" rel="noopener">454934632</a></td>
@@ -4585,6 +4690,116 @@
 <td>2</td>
 <td>11</td>
 <td>4</td>
+<td>20</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=454962236" target="_blank" rel="noopener">454962236</a></td>
+<td>Gamle Oslo - Etterstadsletta 104</td>
+<td>44</td>
+<td>10</td>
+<td>2</td>
+<td>10</td>
+<td>9999</td>
+<td>1</td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455015169" target="_blank" rel="noopener">455015169</a></td>
+<td>Gamle Oslo - St. Jørgens vei 13</td>
+<td>40</td>
+<td>5</td>
+<td>2</td>
+<td>5</td>
+<td>19</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455045057" target="_blank" rel="noopener">455045057</a></td>
+<td>Frogner - Grønnegata 10</td>
+<td>30</td>
+<td>1</td>
+<td>2</td>
+<td>13</td>
+<td>1</td>
+<td>1</td>
+<td>16</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455045329" target="_blank" rel="noopener">455045329</a></td>
+<td>Ullern - Hoffsveien 55B</td>
+<td>79</td>
+<td>13</td>
+<td>9</td>
+<td>10</td>
+<td>14</td>
+<td>4</td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455061756" target="_blank" rel="noopener">455061756</a></td>
+<td>Grünerløkka - Sunnmørgata 1A</td>
+<td>32</td>
+<td>0</td>
+<td>0</td>
+<td>14</td>
+<td>2</td>
+<td>2</td>
+<td>28</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455087540" target="_blank" rel="noopener">455087540</a></td>
+<td>Grünerløkka - Frydenbergveien 58</td>
+<td>45</td>
+<td>8</td>
+<td>2</td>
+<td>2</td>
+<td>10</td>
+<td>2</td>
+<td>11</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455094435" target="_blank" rel="noopener">455094435</a></td>
+<td>Alna - Klosterheimveien 2</td>
+<td>60</td>
+<td>12</td>
+<td>4</td>
+<td>10</td>
+<td>9999</td>
+<td>1</td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455096768" target="_blank" rel="noopener">455096768</a></td>
+<td>Nordre Aker - Minister Ditleffs vei 5B</td>
+<td>96</td>
+<td>26</td>
+<td>3</td>
+<td>5</td>
+<td>35</td>
+<td>5</td>
+<td>24</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455206038" target="_blank" rel="noopener">455206038</a></td>
+<td>Vestre Aker - Søndre Rød 22A</td>
+<td>116</td>
+<td>4</td>
+<td>3</td>
+<td>6</td>
+<td>9999</td>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="https://www.finn.no/realestate/homes/ad.html?finnkode=455252034" target="_blank" rel="noopener">455252034</a></td>
+<td>Grünerløkka - Dynekilgata 19A</td>
+<td>42</td>
+<td>4</td>
+<td>1</td>
+<td>10</td>
+<td>2</td>
+<td>2</td>
 <td>20</td>
 </tr>
 </tbody>
@@ -4721,7 +4936,7 @@
 <script>
 // Custom sort: Norwegian currency "1 234 567 kr", percentages "20,32%", m² sizes "42 m²"
 function parseNorwegianNumber(s) {
-  if (!s || s === '—') return -Infinity;
+  if (!s || s === '—' || s === '-') return Infinity;
   var cleaned = s.replace(/\s*kr$/,'').replace(/\s*m²$/,'').replace(/%$/,'')
                   .replace(/[\s\u00a0]/g,'').replaceAll(',','.');
   var val = Number.parseFloat(cleaned);
